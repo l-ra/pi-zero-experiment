@@ -1,0 +1,13 @@
+[Unit]
+Description=Zero ovladani
+After=network.target
+
+[Service]
+Type=simple
+User=admusr
+WorkingDirectory=/home/admusr
+ExecStart=/home/admusr/go-proj/src/github.com/l-ra/pi-zero-experiment/pi-zero-experiment
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
